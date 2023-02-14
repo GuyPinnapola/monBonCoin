@@ -13,6 +13,7 @@ class AnnoncesModel extends Db{
 
   //Méthode pour trouver toutes les annonces
   public static function findAll($order = null, $limit = null){
+    // Méthode longue
     // if($order === null){
     //     $request = "SELECT * ,annonces.title AS title, categories.title AS NameCat FROM annonces INNER JOIN categories ON annonces.idCategorie = categories.idCategorie" . $limit;
     // }else{
