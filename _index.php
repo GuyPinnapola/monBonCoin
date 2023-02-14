@@ -87,7 +87,7 @@ var_dump(CategoriesModel::findByTitle(["jardin"]));
 echo "<hr>";
 
 //Test de la méthode create() categories
-// CategoriesModel::create(['jouet']);
+// CategoriesModel::create(['jeux vidéo']);
 // $cat = CategoriesModel::create(['Musique']);
 // var_dump($cat);
 
@@ -95,5 +95,5 @@ echo "<hr>";
 // CategoriesModel::update(["instruments de musique", 7]);
 
 //Test de la méthode delete() categories
-CategoriesModel::delete([6]);
+// CategoriesModel::delete([6]);
 
