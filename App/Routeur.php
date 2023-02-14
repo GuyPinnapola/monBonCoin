@@ -2,6 +2,9 @@
 
 namespace App;
 
+
+use Controllers\AnnoncesController;
+
 class Routeur
 {
   public function app()
@@ -26,7 +29,8 @@ class Routeur
     // On définit les routes du projet
     switch ($request) {
       case "":
-        echo "vous êtes sur la page d'accueil";
+        // echo "vous êtes sur la page d'accueil";
+        $accueil = AnnoncesController::accueil();
         break;
       case "toto":
         echo "voues êtes sur la page TOTO";

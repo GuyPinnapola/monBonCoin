@@ -4,6 +4,6 @@
   "user" : "root",
   "password" : "",
   "host" : "localhost",
-  "baseSite" : "/monboncoin/public/"
+  "baseSite" : "/monBonCoin/public/"
 
 }
