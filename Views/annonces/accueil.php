@@ -11,11 +11,11 @@
         <div class="card-header">
           <p>
             <u>
-              Catégorie : <?= $annonce["NameCat"] ?>
+              Catégorie : <?= $annonce["nameCat"] ?>
             </u>
           </p>
         </div>
-        <div class="card-body ">
+        <div class="card-body">
           <h4 class="card-title"><?= $annonce["title"] ?> : <?= $annonce["price"] ?> €</h4>
           <img src="<?= SITEBASE ?>/img/annonces/<?= $annonce["image"] ?>" alt="<?= $annonce["title"] ?>" class="img-fluid">
           <p class="card-text"><?= $annonce["description"] ?></p>
