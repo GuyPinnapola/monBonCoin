@@ -40,13 +40,13 @@ class UsersModel extends Db{
    * Attend un login utilisateur
    * @param array $login[string]
    */
-  // public static function findByLogin(array $login){
-  //   $request = "SELECT * FROM users WHERE login = ?";
-  //   $response = self::getDb()->prepare($request);
-  //   $response->execute($login);
+  public static function findByLogin(array $login){
+    $request = "SELECT * FROM users WHERE login = ?";
+    $response = self::getDb()->prepare($request);
+    $response->execute($login);
 
-  //   return $response->fetch(PDO::FETCH_ASSOC);
-  // }
+    return $response->fetch(PDO::FETCH_ASSOC);
+  }
 
   //Trouver un utilisateur
 //   public static function findByIdOrLogin(array $data){
