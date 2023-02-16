@@ -54,7 +54,8 @@ class Routeur
         
         break;
       case "annonceAjout":
-        echo "vous êtes sur la page création d'annonce";
+        // echo "vous êtes sur la page création d'annonce";
+        $newAnnonce = AnnoncesController::annonceAjout();
         break;
       case "annonceModif":
         echo "vous êtes sur la page modification d'annonce";
@@ -70,10 +71,13 @@ class Routeur
         $inscription = UsersController::inscription();
         break;
       case "connexion":
-        echo "vous êtes sur la page de connexion";
+        // echo "vous êtes sur la page de connexion";
+        $connexion = UsersController::connexion();
         break;
       case "deconnexion":
-        echo "vous êtes sur la page de deconnexion";
+        // echo "vous êtes sur la page de deconnexion";
+        unset($_SESSION["user"]);
+        header("Location: " . SITEBASE);
         break;
       case "profil":
         echo "vous êtes sur la page du profil";
