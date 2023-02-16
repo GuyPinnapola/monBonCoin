@@ -38,7 +38,7 @@ class Routeur
         break;
       case "annonces":
         // echo "vous êtes sur la page des annonces";
-        if (isset($_GET["order"]) && isset($_GET["idCategorie"])){
+        if (isset($_GET["order"]) && isset($_GET["idCategorie"])) {
           $order = $_GET["order"];
           $categorie = $_GET["idCategorie"];
           AnnoncesController::annonces($order, $categorie);
@@ -47,18 +47,26 @@ class Routeur
         break;
       case "annonceDetail":
         // echo "vous êtes sur la page détail de l'annonce";
-        if (isset($_GET["id"])){
+        if (isset($_GET["id"])) {
           $id = (int)$_GET["id"];
           AnnoncesController::detail($id);
         }
-        
+
         break;
       case "annonceAjout":
         // echo "vous êtes sur la page création d'annonce";
         $newAnnonce = AnnoncesController::annonceAjout();
         break;
       case "annonceModif":
-        echo "vous êtes sur la page modification d'annonce";
+        // echo "vous êtes sur la page modification d'annonce";
+        //(isset($_SESSION["user"])) ? $updateAnnonce = AnnoncesController::annonceModif() : header("Location: connexion");
+        if (isset($_SESSION['user'])) {
+          $id = (int)$_GET['id'];
+          $updateAnnonce = AnnoncesController::annonceModif($id);
+        } else {
+          header('Location: connexion');
+        }
+
         break;
       case "annonceSupp":
         echo "vous êtes sur la page suppression d'annonce";
