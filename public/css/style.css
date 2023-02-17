@@ -32,3 +32,19 @@ h2{
 label{
   color:black;
 }
+
+.abtn1{
+  text-decoration: none;
+  background-color: red;
+  border-radius: 25px;
+  color: black;
+  
+}
+
+.abtn2{
+  text-decoration: none;
+  background-color: green;
+  border-radius: 25px;
+  color: black;
+  
+}

@@ -38,6 +38,7 @@
             <li class="nav-item"><a href="annonceAjout" class="btn btn-secondary">Nouvel Annonce</a></li>
             <li class="nav-item"><a href="profil" class="btn btn-secondary">profil</a></li>
             <li class="nav-item"><a href="deconnexion" class="btn btn-secondary">Déconnexion</a></li>
+            <li class="nav-item"><a href="supprimer" class="btn btn-secondary">Supprimer</a></li>
           <?php else : ?>
             <li class="nav-item"><a href="connexion" class="btn btn-secondary">Connexion</a></li>
           <?php endif ?>
